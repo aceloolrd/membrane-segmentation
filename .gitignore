@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Model weights & training artifacts
+checkpoints/
+models/
+logs/
+lightning_logs/
+runs/
+*.pth
+*.ckpt
+*.pt
+*.h5
+
+# Data predictions / generated outputs
+predictions/
+
+# Override global gitignore — include dataset (public, 6 MB)
+!data/
+!data/**
+
+# Secrets
+.env
+*.env.*
+secrets.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# AI assistants
+CLAUDE.md
+.claude/
+.cursor/
+.copilot/
