@@ -14,7 +14,7 @@ def create_dataframe(image_dir: str, mask_dir: str) -> pd.DataFrame:
     return pd.DataFrame({"image": images, "mask": masks})
 
 
-class GranulometryDataset(Dataset):
+class MembraneDataset(Dataset):
     def __init__(self, dataframe: pd.DataFrame, transform=None):
         self.dataframe = dataframe
         self.transform = transform
@@ -39,7 +39,7 @@ class GranulometryDataset(Dataset):
         return image, mask
 
 
-class GranulometryDataModule:
+class MembraneDataModule:
     def __init__(
         self,
         dataframe: pd.DataFrame,
@@ -78,8 +78,8 @@ class GranulometryDataModule:
         train_df, val_df = train_test_split(
             self.dataframe, test_size=self.test_size, random_state=self.random_state
         )
-        self.train_dataset = GranulometryDataset(train_df, transform=self.train_transform)
-        self.val_dataset = GranulometryDataset(val_df, transform=self.val_transform)
+        self.train_dataset = MembraneDataset(train_df, transform=self.train_transform)
+        self.val_dataset = MembraneDataset(val_df, transform=self.val_transform)
 
     def train_dataloader(self) -> DataLoader:
         return DataLoader(

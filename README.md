@@ -36,7 +36,7 @@ Binary semantic segmentation of neuronal membranes in electron microscopy images
 membrane-segmentation/
 ├── segmentation.ipynb   # Main notebook: experiments + manual mask comparison
 ├── src/
-│   ├── dataset.py       # GranulometryDataset, GranulometryDataModule
+│   ├── dataset.py       # MembraneDataset, MembraneDataModule
 │   ├── losses.py        # BCEDiceLoss
 │   ├── callbacks.py     # ModelCheckpoint, EarlyStopping
 │   ├── models.py        # SimpleUNet, SimpleSegNet
